@@ -13,9 +13,9 @@ This system provides a sophisticated multi-agent architecture for warehouse intr
 - **Comprehensive API** for system integration
 - **Clean, modular architecture** following best practices
 
-https://github.com/user-attachments/assets/278e09e3-b69e-4046-a46b-78ae79ee6fe9
+https://github.com/user-attachments/assets/1cd677f1-347e-4923-9247-d9166aa68904
 
-## 🤖 Agents
+## Agents
 
 ### 1. **BaseAgent**
 - Foundation for all agents with logging, status tracking, and execution capabilities
