@@ -2,7 +2,7 @@
 
 A clean, deterministic multi-agent intralogistics copilot for warehouse automation and optimization.
 
-## 🚀 Overview
+## Overview
 
 This system provides a sophisticated multi-agent architecture for warehouse intralogistics, featuring:
 
@@ -13,25 +13,7 @@ This system provides a sophisticated multi-agent architecture for warehouse intr
 - **Comprehensive API** for system integration
 - **Clean, modular architecture** following best practices
 
-## 📦 Architecture
-
-```
-intralogistics-copilot/
-├── app/
-│   ├── agents/                  # Multi-agent system
-│   │   ├── base_agent.py        # Base agent class
-│   │   ├── data_agent.py        # Data retrieval agent
-│   │   ├── monitoring_agent.py  # Robot health monitoring
-│   │   ├── risk_assessment_agent.py # Risk analysis
-│   │   ├── intralogistics_orchestrator.py # Main orchestrator
-│   ├── api/                     # FastAPI interface
-│   │   └── main.py              # REST API endpoints
-│   ├── db/                      # Database layer
-│   └── ui/                      # User interfaces
-├── data/                        # Data storage
-├── scripts/                     # Utility scripts
-└── tests/                       # Test files
-```
+https://github.com/user-attachments/assets/278e09e3-b69e-4046-a46b-78ae79ee6fe9
 
 ## 🤖 Agents
 
@@ -67,46 +49,14 @@ intralogistics-copilot/
 - Manages agent lifecycle and coordination
 - Provides system diagnostics and health checks
 
-## 🔧 Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/your-repo/intralogistics-copilot.git
-cd intralogistics-copilot
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the system
-python test_orchestrator.py
-```
-
-## 🚀 Usage
-
-### Command Line Interface
-
-```python
-from app.agents.intralogistics_orchestrator import IntralogisticsOrchestrator
-
-# Initialize orchestrator
-orchestrator = IntralogisticsOrchestrator()
-
-# Run system diagnostic
-diagnostic = orchestrator.run_diagnostic()
-print(f"System Status: {diagnostic['status']}")
-
-# Execute full workflow
-results = orchestrator.execute()
-print(f"System Status: {results['system_status']}")
-print(f"Recommendations: {results['recommendations']}")
-```
-
 ### REST API
 
 Start the API server:
 
 ```bash
-python app/api/main.py
+PS D:\Projects\Autonomous_Intralogistics_Orchestrator> uvicorn app.api.main:app --reload
+
+PS D:\Projects\Autonomous_Intralogistics_Orchestrator> streamlit run app/ui/streamlit_app.py 
 ```
 
 API Endpoints:
@@ -118,7 +68,7 @@ API Endpoints:
 - `GET /risk-analysis` - Detailed risk analysis
 - `GET /execute-workflow` - Full workflow execution
 
-## 📊 Features
+## Features
 
 ### Deterministic Workflow
 
@@ -144,49 +94,7 @@ The system follows a strict 5-step process:
 - **Risk Categorization**: HIGH/MEDIUM/LOW risk levels
 - **Actionable Recommendations**: Specific suggestions for improvement
 
-## 🔍 Example Output
-
-```json
-{
-  "system_status": "CRITICAL",
-  "metadata": {
-    "total_orders": 500,
-    "total_sensor_records": 2000,
-    "timestamp": "2026-01-11T19:34:07.123456"
-  },
-  "risk_assessment": {
-    "distribution": {"HIGH": 169, "MEDIUM": 331, "LOW": 0},
-    "high_risk_count": 169,
-    "medium_risk_count": 331
-  },
-  "recommendations": [
-    "Immediately address 169 high-risk orders with critical robot issues",
-    "Review 331 medium-risk orders for potential delays"
-  ],
-  "robot_health": [
-    {"robot_id": 1, "health_status": "CRITICAL", "anomaly_count": 8},
-    {"robot_id": 2, "health_status": "CRITICAL", "anomaly_count": 25}
-  ]
-}
-```
-
-## 🧪 Testing
-
-Run the test suite:
-
-```bash
-python test_orchestrator.py
-python test_api.py
-```
-
-## 📈 Performance
-
-- **Processing Speed**: 500 orders analyzed in < 2 seconds
-- **Scalability**: Handles 2000+ sensor records efficiently
-- **Deterministic**: Consistent results across multiple runs
-- **Reliability**: Comprehensive error handling and logging
-
-## 🎯 Use Cases
+## Use Cases
 
 1. **Warehouse Automation**: Real-time monitoring and decision support
 2. **Predictive Maintenance**: Early detection of robot issues
@@ -194,7 +102,7 @@ python test_api.py
 4. **System Integration**: API for warehouse management systems
 5. **Analytics Dashboard**: Data-driven insights and reporting
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - Machine learning for predictive analytics
 - Real-time streaming data processing
@@ -202,14 +110,6 @@ python test_api.py
 - Advanced visualization dashboard
 - Multi-warehouse coordination
 
-## 📝 License
+## License
 
-MIT License
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow the existing code style and submit pull requests.
-
----
-
-**Intralogistics Copilot** - Transforming warehouse operations with intelligent automation 🚀
+- MIT License
